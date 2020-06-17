@@ -1,0 +1,40 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+
+
+
+p {
+    color: blue;
+    margin:0px;
+    padding:10px;
+    
+}
+
+.editBtn {
+    border:none;
+    background-color: white;
+    color: black;
+    outline: none;
+}
+
+.deleteClass {
+    border:none;
+    background-color: white;
+    color: red; 
+    padding:10px; 
+    float: right;
+   
+}
+.deleteClass:hover {
+   
+}
+
+
+.forms {
+    display:none;
+    margin-left: 20px;
+
+}
