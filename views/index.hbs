@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>hello world</h1>
+
+
+    <form action="/catchData" method="post">
+        <input type="text" name='post'>
+        <input type="submit" value="Post" name='submit'>
+
+
+
+    </form>
+
+    {{#each post}}
+      <p>{{this.post}}</p>
+      <div class="containEdits">
+          <button class='editBtn'>Edit</button>
+          <div class="forms">
+              <form action="/delete" method="post">
+                  <input type='hidden' name="id" value={{this.id}}>
+                  <input class='deleteClass' type='submit' name="delete" value='Delete'>
+              </form>
+              <form action="/update" method="post">
+                  <input type='hidden' name="id" value={{this.id}}>
+                  <input type='text' name="post" value={{this.post}}>
+                  <input type='submit' name="update" value='edit'>
+              </form>
+          </div>
+      </div>
+    {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
